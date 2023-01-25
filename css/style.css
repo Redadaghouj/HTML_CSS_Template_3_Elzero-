@@ -3,6 +3,7 @@
 :root {
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
+    --transition-dur: .5s;
 }
 
 * {
@@ -23,6 +24,8 @@ body {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -55,4 +58,73 @@ a {
     .container {
         width: 1170px;
     }
+}
+
+.pd-y {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* Header */
+
+.header {
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 7px 0px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header .container .logo {
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.header .container .logo a {
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.header .navbar-items {
+    display: flex;
+    text-transform: capitalize;
+}
+
+.header .navbar-items li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 18px;
+    color: #000;
+    height: 72px;
+    padding: 0 30px;
+    position: relative;
+    transition: background-color var(--transition-dur), color var(--transition-dur);
+}
+
+.header .navbar-items li a:hover {
+    background-color: #FAFAFA;
+    color: var(--main-color);
+}
+
+.header .navbar-items li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background-color: var(--main-color);
+    transition: width var(--transition-dur);
+}
+
+.header .navbar-items li a:hover::before {
+    width: 100%;
 }
