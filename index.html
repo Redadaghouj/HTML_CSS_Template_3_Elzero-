@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- Render all elements normally -->
     <link rel="stylesheet" href="css/normalize.css" />
-    <!-- Main css file -->
+    <!-- Main CSS file -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,14 +25,53 @@
       <div class="container">
         <div class="logo"><a href="#">Reda</a></div>
         <ul class="navbar-items">
-          <li><a href="#">articles</a></li>
-          <li><a href="#">gallery</a></li>
-          <li><a href="#">features</a></li>
-          <li><a href="#">other links</a></li>
+          <li data-filter="articles"><a>articles</a></li>
+          <li data-filter="gallery"><a>gallery</a></li>
+          <li data-filter="features"><a>features</a></li>
+          <li>
+            <a>other links</a>
+            <div class="mega-menu">
+              <div class="img">
+                <img src="images/megamenu.png" alt="Menu" />
+              </div>
+              <div class="menu-lists">
+                <ul>
+                  <li><i class="fa-regular fa-comments"></i>testimonials</li>
+                  <li><i class="fa-regular fa-user"></i>team members</li>
+                  <li><i class="fa-regular fa-building"></i>services</li>
+                  <li><i class="fa-regular fa-circle-check"></i>our skills</li>
+                  <li><i class="fa-regular fa-clipboard"></i>how it works</li>
+                </ul>
+                <ul>
+                  <li><i class="fa-solid fa-calendar-days"></i>events</li>
+                  <li><i class="fa-solid fa-server"></i>pricing plans</li>
+                  <li><i class="fa-regular fa-circle-play"></i>top videos</li>
+                  <li><i class="fa-solid fa-chart-column"></i>stats</li>
+                  <li><i class="fa-solid fa-percent"></i>request a discount</li>
+                </ul>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </header>
+    <!-- Landing -->
+    <section class="landing">
+      <div class="container">
+        <div class="landing-text">
+          <div class="landing-text-title">welcome, to reda world</div>
+          <p class="landing-text-desc">
+            Here Iam gonna share everything about my life. Books Iam reading,
+            Games Iam Playing, Stories and Events
+          </p>
+        </div>
+        <img src="images/landing-image.png" alt="" />
+      </div>
+      <i class="fa-solid fa-angles-down fa-xl icon"></i>
+    </section>
     <!-- Font-awesome library -->
     <script src="js/all.min.js"></script>
+    <!-- main JS file -->
+    <script src="js/main.js"></script>
   </body>
 </html>
