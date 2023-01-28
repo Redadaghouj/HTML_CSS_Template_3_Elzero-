@@ -941,6 +941,92 @@ a {
     padding: 3px 5px;
 }
 
+/* Work Steps */
+
+.work-steps {
+    background-color: var(--background-color);
+}
+
+.work-steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+@media (max-width: 991px) {
+    .work-steps-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.work-steps-container img {
+    max-width: 100%;
+}
+
+.work-steps-container .card {
+    display: flex;
+    align-items: center;
+    background-color: #F6F5F5;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .work-steps-container .card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.work-steps-container .card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    background-color: #EDEDED;
+    transition: height .3s, width .3s;
+    z-index: -1;
+}
+
+.work-steps-container .card:hover::before {
+    height: 100%;
+    width: 100%;
+}
+
+.work-steps-container .card img {
+    width: 65px;
+    height: 65px;
+    margin-right: 30px;
+}
+
+@media (max-width: 767px) {
+    .work-steps-container .card img {
+        margin: 0 0 30px;
+    }
+}
+
+.work-steps-container .card .info .title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.work-steps-container .card .info .desc {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.7;
+}
+
+/* Latest Event */
+
 /* Animation */
 
 @keyframes landing-img {
