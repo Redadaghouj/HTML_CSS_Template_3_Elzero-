@@ -2,7 +2,6 @@
 
 :root {
     --main-color: #2196f3;
-    --main-color-alt: #1787e0;
     --secondary-color: #666;
     --border-color: #e6e6e7;
     --background-color: #ECECEC;
@@ -791,6 +790,7 @@ a {
     transition: color .5s;
 }
 
+
 .team-container .card:hover .title {
     color: #777;
 }
@@ -798,6 +798,147 @@ a {
 .team-container .card .desc {
     margin-left: 80px;
     margin-bottom: 20px;
+}
+
+/* Services */
+
+.services {
+    background-color: var(--background-color);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.services-container .card {
+    background-color: #fff;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: transform .5s;
+    position: relative;
+    counter-increment: cards;
+}
+
+.services-container .card:hover {
+    transform: translateY(-10px);
+}
+
+.services-container .card::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 0;
+    background-color: var(--main-color);
+    transition: width .5s;
+}
+
+.services-container .card:hover::before {
+    width: 100%;
+}
+
+.services-container .card svg {
+    color: #D5D5D5;
+    margin: 35px 0 20px;
+}
+
+.services-container .card .title {
+    color: var(--main-color);
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+.services-container .card .info {
+    position: relative;
+    text-align: right;
+    padding: 15px;
+    background-color: #F9F9F9;
+    overflow: hidden;
+}
+
+.services-container .card .info::before {
+    content: "0" counter(cards);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    color: #fff;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.services-container .card .info::after {
+    content: "";
+    position: absolute;
+    left: 74px;
+    top: 0;
+    height: 103%;
+    width: 50px;
+    background-color: #D5D5D5;
+    transform: skew(-30deg);
+}
+
+.services-container .card .info a {
+    color: var(--main-color);
+}
+
+/* Skills */
+
+.skills-container {
+    display: flex;
+    align-items: center;
+}
+
+.skills-container img {
+    max-width: 100%;
+}
+
+@media (max-width: 991px) {
+    .skills-container img {
+        display: none;
+    }
+}
+
+.skills-container .my-skills {
+    flex: 1;
+}
+
+.skills-container .my-skills .progress {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #eee;
+    margin: 20px 0;
+}
+
+.skills-container .my-skills .progress .progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.skills-container .my-skills .progress::after {
+    content: attr(data-prog);
+    position: absolute;
+    right: 0;
+    top: -40px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--main-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 3px 5px;
 }
 
 /* Animation */
