@@ -80,6 +80,7 @@ a {
     border: 2px solid #000;
     padding: 10px 20px;
     position: relative;
+    z-index: 1;
 }
 
 .box-header-title:hover {
@@ -659,6 +660,144 @@ a {
 
 .features-container .card.passion .card-text-btn::before {
     background-color: #03a9f4;
+}
+
+/* Testimonials */
+
+.testimonials {
+    background-color: var(--background-color);
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testimonials-container .card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+    position: relative;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.testimonials-container .card img {
+    position: absolute;
+    top: -50px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--background-color);
+}
+
+.testimonials-container .card .subtitle {
+    margin: 10px 0;
+    color: var(--secondary-color);
+}
+
+.testimonials-container .card .stars svg:not(.non-fill) {
+    color: #FFC107;
+}
+
+.testimonials-container .card .desc {
+    margin-top: 10px;
+    color: var(--secondary-color);
+    line-height: 1.5;
+}
+
+/* Team */
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team-container .card {
+    position: relative;
+}
+
+.team-container .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 60px);
+    height: 100%;
+    background-color: #F3F3F3;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.team-container .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #E4E4E4;
+    z-index: -1;
+    border-radius: 10px;
+    transition: width .5s;
+}
+
+.team-container .card:hover::after {
+    width: calc(100% - 60px);
+}
+
+.team-container .card .image-holder {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.team-container .card .image-holder img {
+    width: calc(100% - 60px);
+    border-radius: 10px;
+    transition: filter .5s;
+}
+
+.team-container .card:hover .image-holder img {
+    filter: grayscale(100%);
+}
+
+.team-container .card .image-holder .social-icons {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-container .card .image-holder .social-icons svg {
+    color: #777;
+    padding: 15px;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+.team-container .card .image-holder .social-icons svg:hover {
+    color: var(--main-color);
+}
+
+.team-container .card .title {
+    font-size: 22px;
+    color: var(--main-color);
+    margin: 20px 0 10px 80px;
+    transition: color .5s;
+}
+
+.team-container .card:hover .title {
+    color: #777;
+}
+
+.team-container .card .desc {
+    margin-left: 80px;
+    margin-bottom: 20px;
 }
 
 /* Animation */
