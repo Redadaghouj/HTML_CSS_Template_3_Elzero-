@@ -1379,6 +1379,7 @@ a {
 
 .top-video-container .left-side {
     flex: 1;
+    min-width: 300px
 }
 
 .top-video-container .left-side .head {
@@ -1389,19 +1390,15 @@ a {
 }
 
 .top-video-container .left-side .desc {
-    padding: 15px 20px;
+    padding: 12px 20px;
     line-height: 2;
     cursor: pointer;
     transition: background-color .5s;
+    border-top: 1px solid #E2E2E2;
 }
 
 .top-video-container .left-side .desc:hover {
     background-color: #FAFAFA;
-}
-
-
-.top-video-container .left-side .desc:not(:last-child) {
-    border-bottom: 1px solid #E2E2E2;
 }
 
 .top-video-container .left-side .desc p {
@@ -1432,6 +1429,110 @@ a {
 .top-video-container .right-side .desc {
     background-color: #fff;
     padding: 20px;
+    margin-top: 20px;
+}
+
+/* Stats */
+
+.stats {
+    background-image: url(../images/stats.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.stats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 95%);
+}
+
+.stats-container {
+    text-align: center;
+}
+
+.stats-container .title {
+    font-size: 40px;
+    margin: 0 0 50px;
+    position: relative;
+}
+
+.stats-container .boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.stats-container .boxes .box {
+    background-color: #FCFDFD;
+    color: #303132;
+    padding: 25px 0;
+    transition: background-color .5s;
+    position: relative;
+}
+
+.stats-container .boxes .box:hover {
+    background-color: #fff;
+}
+
+.stats-container .boxes .box::before,
+.stats-container .boxes .box::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    transition: height 1s;
+    background-color: var(--main-color);
+}
+
+.stats-container .boxes .box::before {
+    bottom: 0;
+    left: 0;
+}
+
+.stats-container .boxes .box::after {
+    top: 0;
+    right: 0;
+}
+
+.stats-container .boxes .box:hover::before,
+.stats-container .boxes .box:hover::after {
+    height: 100%;
+}
+
+.stats-container .boxes .box svg {
+    font-size: 33px;
+}
+
+.stats-container .boxes .box .number {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.stats-container .boxes .box:hover svg,
+.stats-container .boxes .box:hover .number {
+    color: #000;
+}
+
+.stats-container .boxes .box .subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4BA9F4;
+    font-style: italic;
+}
+
+.stats-container .boxes .box:hover .subtitle {
+    color: var(--main-color);
+}
+
+.stats-container .boxes .box svg,
+.stats-container .boxes .box .number,
+.stats-container .boxes .box .subtitle {
+    transition: color .5s;
 }
 
 /* Animation */
