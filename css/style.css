@@ -1027,6 +1027,172 @@ a {
 
 /* Latest Event */
 
+.latest-events {
+    position: relative;
+}
+
+.latest-events .dots-1,
+.latest-events .dots-2 {
+    position: absolute;
+    background-image: url(../images/dots.png);
+    width: 205px;
+    height: 205px;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 991px) {
+
+    .latest-events .dots-1,
+    .latest-events .dots-2 {
+        display: none;
+    }
+}
+
+.latest-events .dots-1 {
+    top: 200px;
+    right: 0;
+}
+
+.latest-events .dots-2 {
+    bottom: 140px;
+    left: 0;
+}
+
+.latest-events-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.latest-events-container .img-holder {
+    flex: 1;
+}
+
+@media (max-width: 991px) {
+    .latest-events-container .img-holder {
+        display: none;
+    }
+}
+
+.latest-events-container .img-holder img {
+    width: 450px;
+}
+
+.latest-events-container .box {
+    flex: 2;
+    text-align: center;
+}
+
+.latest-events-container .box .counters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.latest-events-container .box .counters .counter {
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    width: 75px;
+    transition: border-color .5s;
+}
+
+.latest-events-container .box .counters .counter:hover {
+    border-color: var(--main-color);
+}
+
+.latest-events-container .box .counters .counter div {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 20px 15px;
+}
+
+.latest-events-container .box .counters .counter span {
+    font-size: 13px;
+    display: block;
+    padding: 10px 0;
+    border-top: 1px solid #d4d4d4;
+    transition: border-color .5s;
+}
+
+.latest-events-container .box .counters .counter:hover span {
+    border-color: var(--main-color);
+}
+
+.box-desc {
+    color: var(--secondary-color);
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.latest-events .subscribe {
+    background-color: #F6F5F5;
+    padding: 25px;
+    width: fit-content;
+    margin: 60px auto 0;
+    border-radius: 50px;
+}
+
+@media (max-width: 767px) {
+    .latest-events .subscribe {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+.latest-events .subscribe #subscribe-email {
+    padding: 20px;
+    border-radius: 50px;
+    outline: 0;
+    border: 0;
+    margin-right: 20px;
+    width: 400px;
+    caret-color: var(--main-color);
+}
+
+
+@media (max-width: 767px) {
+    .latest-events .subscribe #subscribe-email {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+.latest-events .subscribe #subscribe-email::placeholder {
+    transition: color .3s;
+}
+
+.latest-events .subscribe #subscribe-email:focus::placeholder {
+    color: #fff;
+}
+
+.latest-events .subscribe #subscribe-btn {
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+
+@media (max-width: 767px) {
+    .latest-events .subscribe #subscribe-btn {
+        border-radius: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.latest-events .subscribe #subscribe-btn:hover {
+    opacity: .8;
+}
+
+
 /* Animation */
 
 @keyframes landing-img {
