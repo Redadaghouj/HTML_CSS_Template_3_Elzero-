@@ -1463,19 +1463,20 @@ a {
 .stats-container .boxes {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .stats-container .boxes .box {
-    background-color: #FCFDFD;
+    background-color: #fff;
     color: #303132;
     padding: 25px 0;
-    transition: background-color .5s;
+    opacity: .9;
     position: relative;
+    transition: opacity .5s;
 }
 
 .stats-container .boxes .box:hover {
-    background-color: #fff;
+    opacity: 1;
 }
 
 .stats-container .boxes .box::before,
@@ -1514,25 +1515,22 @@ a {
 }
 
 .stats-container .boxes .box:hover svg,
-.stats-container .boxes .box:hover .number {
-    color: #000;
+.stats-container .boxes .box:hover .number,
+.stats-container .boxes .box:hover .subtitle {
+    opacity: 1;
 }
 
 .stats-container .boxes .box .subtitle {
     font-size: 20px;
     font-weight: bold;
-    color: #4BA9F4;
-    font-style: italic;
-}
-
-.stats-container .boxes .box:hover .subtitle {
     color: var(--main-color);
+    font-style: italic;
 }
 
 .stats-container .boxes .box svg,
 .stats-container .boxes .box .number,
 .stats-container .boxes .box .subtitle {
-    transition: color .5s;
+    transition: opacity .5s;
 }
 
 /* Animation */
