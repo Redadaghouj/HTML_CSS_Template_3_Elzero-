@@ -1264,7 +1264,7 @@ a {
 .pricing-container .card .label::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
     border-width: 20px;
     border-style: solid;
@@ -1533,6 +1533,117 @@ a {
     transition: opacity .5s;
 }
 
+/* Discount */
+
+.discount {
+    height: 100vh;
+}
+
+.discount-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.discount-container .left {
+    flex-basis: 50%;
+    text-align: center;
+    background-size: cover;
+    animation: discount-background 5s infinite linear alternate;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+@media (max-width: 991px) {
+    .discount-container .left {
+        flex-basis: 100%;
+    }
+}
+
+.discount-container .left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23 135 224 / 97%);
+    z-index: -1;
+}
+
+.discount-container .left .title {
+    color: #fff;
+    font-size: 40px;
+    margin: 70px 0 0;
+    letter-spacing: -2px;
+}
+
+.discount-container .left .desc {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 30px auto 15px;
+}
+
+.discount-container .left img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.discount-container .right {
+    flex-basis: 50%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+@media (max-width: 991px) {
+    .discount-container .right {
+        flex-basis: 100%;
+    }
+}
+
+.discount-container .right .title {
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+.discount-container .right form input,
+.discount-container .right form textarea {
+    width: 300px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #ccc;
+    caret-color: var(--main-color);
+}
+
+.discount-container .right form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.discount-container .right form input[type="submit"] {
+    cursor: pointer;
+    border: 0;
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: opacity .5s;
+}
+
+.discount-container .right form input[type="submit"]:hover {
+    opacity: .9;
+}
+
+/* Footer */
+
 /* Animation */
 
 @keyframes landing-img {
@@ -1612,5 +1723,15 @@ a {
     100% {
         opacity: 0;
         transform: scale(2);
+    }
+}
+
+@keyframes discount-background {
+    0% {
+        background-image: url(../images/discount-background1.jpg);
+    }
+
+    100% {
+        background-image: url(../images/discount-background2.jpg);
     }
 }
