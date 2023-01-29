@@ -1161,11 +1161,11 @@ a {
 }
 
 .latest-events .subscribe #subscribe-email::placeholder {
-    transition: color .3s;
+    transition: opacity .3s;
 }
 
 .latest-events .subscribe #subscribe-email:focus::placeholder {
-    color: #fff;
+    opacity: 0;
 }
 
 .latest-events .subscribe #subscribe-btn {
@@ -1192,6 +1192,176 @@ a {
     opacity: .8;
 }
 
+/* Pricing */
+
+.pricing {
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.pricing .dots-1,
+.pricing .dots-2 {
+    position: absolute;
+    background-image: url(../images/dots.png);
+    width: 205px;
+    height: 205px;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+
+    .pricing .dots-1,
+    .pricing .dots-2 {
+        display: none;
+    }
+}
+
+.pricing .dots-1 {
+    top: 200px;
+    right: 0;
+}
+
+.pricing .dots-2 {
+    bottom: 140px;
+    left: 0;
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pricing-container .card {
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+@media (min-width: 1200px) {
+    .pricing-container .card:nth-child(2) {
+        transform: translateY(-10px);
+    }
+}
+
+.pricing-container .card .label {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 10px 35px 10px;
+    width: 40px;
+    writing-mode: vertical-rl;
+}
+
+.pricing-container .card .label::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    transition: border-bottom-color .5s;
+}
+
+.pricing-container .card:hover .label::before {
+    border-bottom-color: #F6F6F6;
+}
+
+.pricing-container .card::before,
+.pricing-container .card::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 50%;
+    background-color: #F6F6F6;
+    z-index: -1;
+    transition: width .5s;
+}
+
+.pricing-container .card::before {
+    top: 0;
+    left: 0;
+}
+
+.pricing-container .card::after {
+    bottom: 0;
+    right: 0;
+}
+
+.pricing-container .card:hover::before,
+.pricing-container .card:hover::after {
+    width: 100%;
+}
+
+.pricing-container .card .title {
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.pricing-container .card img {
+    width: 80px;
+    height: 80px;
+    margin: 30px 0;
+}
+
+
+.pricing-container .card .price {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.pricing-container .card .dur {
+    color: var(--secondary-color);
+    display: block;
+    margin: 5px 0 15px;
+}
+
+.pricing-container .card .advantages {
+    text-align: left;
+}
+
+.pricing-container .card .advantages li {
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+}
+
+.pricing-container .card .advantages li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--main-color);
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.pricing-container .card .choose-btn {
+    color: var(--main-color);
+    padding: 14px 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    background-color: transparent;
+    font-weight: bold;
+    margin: 40px 0;
+    cursor: pointer;
+    transition: color .5s, background-color .5s;
+}
+
+.pricing-container .card .choose-btn:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
 
 /* Animation */
 
