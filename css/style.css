@@ -1536,7 +1536,7 @@ a {
 /* Discount */
 
 .discount {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .discount-container {
@@ -1643,6 +1643,128 @@ a {
 }
 
 /* Footer */
+
+.footer {
+    background-color: #191919;
+    color: #b9b9b9;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+@media (max-width: 767px) {
+    .footer-container {
+        text-align: center;
+    }
+}
+
+.footer-container .infos .logo {
+    color: #fff;
+    font-size: 50px;
+    margin: 0;
+}
+
+.footer-container .infos span {
+    width: 50px;
+    height: 50px;
+    background-color: #313131;
+    margin: 20px 7px 20px 0;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: background-color .5s, color .5s;
+}
+
+.footer-container .infos span.facebook:hover {
+    background-color: #1877F2;
+    color: #fff;
+}
+
+.footer-container .infos span.twitter:hover {
+    background-color: #1DA1F2;
+    color: #fff;
+}
+
+.footer-container .infos span.youtube:hover {
+    background-color: #FF0000;
+    color: #fff;
+}
+
+.footer-container .infos .desc {
+    line-height: 1.8;
+}
+
+.footer-container .links li {
+    padding: 15px 0;
+    position: relative;
+    cursor: pointer;
+    transition: margin-left .5s, color .5s;
+}
+
+.footer-container .links li:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+
+.footer-container .links li:hover {
+    margin-left: 10px;
+    color: #fff;
+}
+
+.footer-container .links li::before {
+    content: "\f101";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--main-color);
+    margin-right: 10px;
+}
+
+.footer-container .address .line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .footer-container .address .line {
+        flex-direction: column;
+    }
+}
+
+.footer-container .address .line svg {
+    color: var(--main-color);
+    margin-right: 15px;
+}
+
+@media (max-width: 767px) {
+    .footer-container .address .line svg {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+}
+
+.footer-container .address .line span {
+    line-height: 1.8;
+}
+
+.footer-container .small-gallery img {
+    width: 78px;
+    height: 78px;
+    border: 3px solid #fff;
+    margin: 2px;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    border-top: 1px solid #444;
+    text-align: center;
+    color: #fff;
+}
 
 /* Animation */
 
