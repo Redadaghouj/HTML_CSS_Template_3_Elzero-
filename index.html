@@ -25,9 +25,9 @@
       <div class="container">
         <div class="logo"><a href="#">Reda</a></div>
         <ul class="navbar-items">
-          <li data-filter="articles"><a>articles</a></li>
-          <li data-filter="gallery"><a>gallery</a></li>
-          <li data-filter="features"><a>features</a></li>
+          <li><a data-filter="articles">articles</a></li>
+          <li><a data-filter="gallery">gallery</a></li>
+          <li><a data-filter="features">features</a></li>
           <li>
             <a>other links</a>
             <div class="mega-menu">
@@ -36,18 +36,38 @@
               </div>
               <div class="menu-lists">
                 <ul>
-                  <li><i class="fa-regular fa-comments"></i>testimonials</li>
-                  <li><i class="fa-regular fa-user"></i>team members</li>
-                  <li><i class="fa-regular fa-building"></i>services</li>
-                  <li><i class="fa-regular fa-circle-check"></i>our skills</li>
-                  <li><i class="fa-regular fa-clipboard"></i>how it works</li>
+                  <li data-filter="testimonials">
+                    <i class="fa-regular fa-comments"></i>testimonials
+                  </li>
+                  <li data-filter="team">
+                    <i class="fa-regular fa-user"></i>team members
+                  </li>
+                  <li data-filter="services">
+                    <i class="fa-regular fa-building"></i>services
+                  </li>
+                  <li data-filter="skills">
+                    <i class="fa-regular fa-circle-check"></i>our skills
+                  </li>
+                  <li data-filter="work-steps">
+                    <i class="fa-regular fa-clipboard"></i>how it works
+                  </li>
                 </ul>
                 <ul>
-                  <li><i class="fa-solid fa-calendar-days"></i>events</li>
-                  <li><i class="fa-solid fa-server"></i>pricing plans</li>
-                  <li><i class="fa-regular fa-circle-play"></i>top videos</li>
-                  <li><i class="fa-solid fa-chart-column"></i>stats</li>
-                  <li><i class="fa-solid fa-percent"></i>request a discount</li>
+                  <li data-filter="latest-events">
+                    <i class="fa-solid fa-calendar-days"></i>events
+                  </li>
+                  <li data-filter="pricing">
+                    <i class="fa-solid fa-server"></i>pricing plans
+                  </li>
+                  <li data-filter="top-video">
+                    <i class="fa-regular fa-circle-play"></i>top videos
+                  </li>
+                  <li data-filter="stats">
+                    <i class="fa-solid fa-chart-column"></i>stats
+                  </li>
+                  <li data-filter="discount">
+                    <i class="fa-solid fa-percent"></i>request a discount
+                  </li>
                 </ul>
               </div>
             </div>
@@ -67,7 +87,7 @@
         </div>
         <img src="images/landing-image.png" alt="" />
       </div>
-      <i class="fa-solid fa-angles-down fa-xl icon"></i>
+      <i data-filter="articles" class="fa-solid fa-angles-down fa-xl icon"></i>
     </section>
     <!-- Articles -->
     <section class="articles pd-y">
@@ -191,6 +211,8 @@
         </div>
       </div>
     </section>
+    <!-- Spikes -->
+    <div class="spikes"></div>
     <!-- Gallery -->
     <section class="gallery pd-y">
       <div class="box-header">
@@ -488,6 +510,8 @@
         </div>
       </div>
     </section>
+    <!-- Spikes -->
+    <div class="spikes"></div>
     <!-- Services -->
     <section class="services pd-y">
       <div class="box-header">
@@ -552,25 +576,25 @@
             <div class="prog-holder">
               <h3 class="title">HTML</h3>
               <div class="progress" data-prog="80%">
-                <span class="progress-fill" style="width: 80%"></span>
+                <span class="progress-fill" style="width: 0%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h3 class="title">CSS</h3>
               <div class="progress" data-prog="85%">
-                <span class="progress-fill" style="width: 85%"></span>
+                <span class="progress-fill" style="width: 0%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h3 class="title">JavaScript</h3>
               <div class="progress" data-prog="70%">
-                <span class="progress-fill" style="width: 70%"></span>
+                <span class="progress-fill" style="width: 0%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h3 class="title">Python</h3>
               <div class="progress" data-prog="80%">
-                <span class="progress-fill" style="width: 80%"></span>
+                <span class="progress-fill" style="width: 0%"></span>
               </div>
             </div>
           </div>
@@ -638,23 +662,23 @@
           <div class="box">
             <div class="counters">
               <div class="counter">
-                <div>29</div>
+                <div class="days">29</div>
                 <span>Days</span>
               </div>
               <div class="counter">
-                <div>14</div>
+                <div class="hours">14</div>
                 <span>Hours</span>
               </div>
               <div class="counter">
-                <div>29</div>
+                <div class="minutes">29</div>
                 <span>Minutes</span>
               </div>
               <div class="counter">
-                <div>07</div>
+                <div class="secondes">07</div>
                 <span>Secondes</span>
               </div>
             </div>
-            <h1 class="box-title">Tech Masters Event 2021</h1>
+            <h1 class="box-title">Tech Masters Event 2024</h1>
             <div class="box-desc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero
               tenetur doloremque iusto ut adipisci quam ratione aliquam
@@ -783,22 +807,22 @@
           <div class="boxes">
             <div class="box">
               <i class="fa-regular fa-user"></i>
-              <div class="number">150</div>
+              <div class="number" data-nbr="150">0</div>
               <span class="subtitle">Clients</span>
             </div>
             <div class="box">
               <i class="fa-solid fa-code"></i>
-              <div class="number">135</div>
+              <div class="number" data-nbr="135">0</div>
               <span class="subtitle">Projects</span>
             </div>
             <div class="box">
               <i class="fa-solid fa-earth-africa"></i>
-              <div class="number">50</div>
+              <div class="number" data-nbr="50">0</div>
               <span class="subtitle">Countries</span>
             </div>
             <div class="box">
               <i class="fa-regular fa-money-bill-1"></i>
-              <div class="number">500</div>
+              <div class="number" data-nbr="500">0</div>
               <span class="subtitle">Money</span>
             </div>
           </div>
@@ -886,6 +910,10 @@
       </div>
       <div class="copyright">Made With &lt;3 By Reda Dgh</div>
     </section>
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+      <i class="fa-solid fa-angle-up"></i>
+    </div>
     <!-- Font-awesome library -->
     <script src="js/all.min.js"></script>
     <!-- main JS file -->
